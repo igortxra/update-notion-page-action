@@ -37,7 +37,7 @@ jobs:
     steps:
       - name: Update notion page properties
         id: update-page
-        uses: igortxra/hello-world-javascript-action@v1.5
+        uses: igortxra/hello-world-javascript-action@v1.0
         with:
           notion-token: ${{ secrets.NOTION_TOKEN }}
           page-id: ${{ secrets.NOTION_PAGE_ID }}
