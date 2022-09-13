@@ -13,8 +13,8 @@ try {
     const response = await notion.pages.update({
       page_id: PAGE_ID,
       properties: {
-        PROPERTY_NAME: {
-          PROPERTY_TYPE: PROPERTY_VALUE,
+        [PROPERTY_NAME]: {
+          [PROPERTY_TYPE]: PROPERTY_VALUE,
         },
       },
     });
