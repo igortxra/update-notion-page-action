@@ -4,9 +4,13 @@ const { Client } = require('@notionhq/client');
 const NOTION_TOKEN = core.getInput('notion-token')
 const PAGE_ID = core.getInput('page-id')
 const PROPERTY_NAME = core.getInput('property-name')
-const PROPERTY_VALUE = core.getInput('property-value')
 const PROPERTY_TYPE = core.getInput('property-type')
-const notion = new Client({ auth: NOTION_TOKEN });
+var PROPERTY_VALUE = core.getInput('property-value')
+
+const notion = new Client({ auth: NOTION_TOKEN })
+
+if (PROPERTY_TYPE == "number")
+  PROPERTY_VALUE = parseFloat(PROPERTY_VALUE);
 
 try {
   (async () => {
