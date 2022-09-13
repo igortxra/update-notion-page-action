@@ -1,11 +1,21 @@
-name: 'Update Notion Page properties'
-description: 'Updata properties in notion page'
+name: 'Update Notion Page property'
+description: 'Update property in notion page'
 inputs:
   notion-token:
     description: 'Notion API Key'
     required: true
   page-id: 
     description: 'Notion page id to be updated'
+    required: true
+  property-name: 
+    description: 'Property name to be updated'
+    required: true
+  property-type: 
+    description: 'Property type to be updated'
+    required: true
+    default: 'number'
+  property-value: 
+    description: 'Property new value'
     required: true
 outputs:
   status:

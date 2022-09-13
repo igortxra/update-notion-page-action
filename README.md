@@ -1,21 +1,30 @@
-# Hello world javascript action
+# Update Notion Page
 
-This action prints "Hello World" or "Hello" + the name of a person to greet to the log.
+This action updates a given property from a notion page.
 
 ## Inputs
 
-## `who-to-greet`
+## `notion-token`
+**Required** Notion API Key
 
-**Required** The name of the person to greet. Default `"World"`.
+## `page-id`
+**Required** Notion page id
+
+## `property-name`
+**Required** Notion page property name
+
+## `property-value`
+**Required** Notion page property value
+
+## `property-type`
+**Required** Notion page property type. Default "number"
 
 ## Outputs
 
-## `time`
+## `status`
 
-The time we greeted you.
+Update status
 
 ## Example usage
 
-uses: actions/hello-world-javascript-action@v1.1
-with:
-  who-to-greet: 'Mona the Octocat'
+-- TO-DO --
