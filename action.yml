@@ -1,13 +1,15 @@
-name: 'Hello World'
-description: 'Greet someone and record the time'
+name: 'Update Notion Page properties'
+description: 'Updata properties in notion page'
 inputs:
-  who-to-greet:  # id of input
-    description: 'Who to greet'
+  notion-token:
+    description: 'Notion API Key'
     required: true
-    default: 'World'
+  page-id: 
+    description: 'Notion page id to be updated'
+    required: true
 outputs:
-  time: # id of output
-    description: 'The time we greeted you'
+  status:
+    description: 'Update status'
 runs:
   using: 'node16'
   main: 'index.js'
