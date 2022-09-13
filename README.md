@@ -27,4 +27,24 @@ Update status
 
 ## Example usage
 
--- TO-DO --
+```yml
+on: [push]
+
+jobs:
+  update_test_coverage_in_notion:
+    runs-on: ubuntu-latest
+    name: Update Notion Page
+    steps:
+      - name: Update notion page properties
+        id: update-page
+        uses: igortxra/hello-world-javascript-action@v1.5
+        with:
+          notion-token: ${{ secrets.NOTION_TOKEN }}
+          page-id: ${{ secrets.NOTION_PAGE_ID }}
+          property-name: "test coverage"
+          property-value: "0.9"
+          property-type: "number"
+          
+      - name: Get the update output
+        run: echo "Update executed with ${{ steps.update-page.outputs.status }}"
+```
